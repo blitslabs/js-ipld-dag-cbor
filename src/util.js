@@ -205,7 +205,7 @@ async function cid (binaryBlob, userOptions = {}) {
 
   const hashName = multihash.codes[options.hashAlg]
   const hash = await multihashing(binaryBlob, hashName)
-  const codecName = multicodec.getNameFromCode(module.exports.codec)
+  // const codecName = multicodec.getNameFromCode(module.exports.codec)
   const cid = new CID(options.cidVersion, 85, hash)
 
   return cid
